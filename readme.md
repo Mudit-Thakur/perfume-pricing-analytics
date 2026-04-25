@@ -16,7 +16,7 @@ An end-to-end pricing intelligence pipeline that scrapes perfume listings across
 
 👉 [View Interactive Looker Studio Dashboard](https://datastudio.google.com/reporting/45d52495-9ce0-4e54-9451-da9c9bb45b5a)
 
-![Dashboard Preview](https://github.com/Mudit-Thakur/perfume-pricing-analytics/blob/main/Indian_Perfume_Pricing_Intelligence_Dashboard.png)
+![Dashboard Preview](https://github.com/Mudit-Thakur/perfume-pricing-analytics/blob/main/dashboard_preview.png?raw=true)
 
 ---
 
@@ -178,4 +178,4 @@ ORDER BY brand_clean, price_rank;
 ## 👤 Author
 
 **Mudit Thakur** · Data Analyst
-[GitHub](https://github.com/Mudit-Thakur) · [LinkedIn](https://www.linkedin.com/in/mudit-thakur1/)
+[GitHub](https://github.com/Mudit-Thakur) · [LinkedIn](https://linkedin.com/in/mudit-thakur)
