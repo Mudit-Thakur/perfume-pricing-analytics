@@ -177,4 +177,4 @@ ORDER BY brand_clean, price_rank;
 ## 👤 Author
 
 **Mudit Thakur** · Data Analyst
-[GitHub](https://github.com/Mudit-Thakur) · [LinkedIn](https://linkedin.com/in/mudit-thakur)
+[GitHub](https://github.com/Mudit-Thakur) · [LinkedIn](https://www.linkedin.com/in/mudit-thakur1/)
