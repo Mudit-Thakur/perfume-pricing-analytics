@@ -54,7 +54,7 @@ perfume-pricing-analytics/
 │
 ├── perfume_scraper.py                  # Multi-platform scraper (SerpApi)
 ├── Perfume_Pricing_Analytics_India.ipynb  # Full analysis notebook
-├── perfume_prices_clean.csv            # Clean dataset (108 products)
+├── perfume_prices_clean.csv            # Clean dataset (2,067 unique products)
 ├── .gitignore                          # Excludes raw scraper outputs + API keys
 └── README.md
 ```
