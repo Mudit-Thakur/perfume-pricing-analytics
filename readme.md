@@ -16,7 +16,7 @@ An end-to-end pricing intelligence pipeline that scrapes perfume listings across
 
 👉 [View Interactive Looker Studio Dashboard](https://datastudio.google.com/reporting/45d52495-9ce0-4e54-9451-da9c9bb45b5a)
 
-![Dashboard Preview](https://github.com/Mudit-Thakur/perfume-pricing-analytics/blob/main/Indian_Perfume_Pricing_Intelligence_Dashboard.png)
+![Dashboard Preview](https://github.com/Mudit-Thakur/perfume-pricing-analytics/blob/main/dashboard_preview.png?raw=true)
 
 ---
 
@@ -35,15 +35,13 @@ An end-to-end pricing intelligence pipeline that scrapes perfume listings across
 ## 🏗️ Pipeline Architecture
 
 ```
-ScraperAPI (rotating proxies, 3 platforms)
+SerpApi (Google Shopping + Google Search)
             ↓
-  perfume_scraper_v2.py  ←  Python 3.11
+  perfume_scraper.py  ←  Python 3.11
             ↓
-  perfume_prices_raw.csv  (5,254 raw rows)
+  perfume_prices_clean.csv  (108 clean rows, 3 platforms)
             ↓
-  perfume_prices_clean.csv  (2,067 unique products)
-            ↓
-  Colab Notebook  ←  Pandas + SQLite + Plotly + RapidFuzz
+  Colab Notebook  ←  Pandas + SQLite + Plotly
             ↓
   Google Sheets  →  Looker Studio Dashboard
 ```
@@ -55,12 +53,10 @@ ScraperAPI (rotating proxies, 3 platforms)
 ```
 perfume-pricing-analytics/
 │
-├── perfume_scraper_v2.py                    # ScraperAPI multi-platform scraper
-├── Perfume_Pricing_Analytics_India.ipynb    # Full analysis + matching + recommendations
-├── perfume_prices_clean.csv                 # Clean dataset (2,067 products)
-├── perfume_arbitrage.csv                    # Cross-platform arbitrage opportunities
-├── perfume_recommendations.csv              # Price recommendation engine output
-├── .gitignore
+├── perfume_scraper.py                  # Multi-platform scraper (SerpApi)
+├── Perfume_Pricing_Analytics_India.ipynb  # Full analysis notebook
+├── perfume_prices_clean.csv            # Clean dataset (108 products)
+├── .gitignore                          # Excludes raw scraper outputs + API keys
 └── README.md
 ```
 
@@ -140,14 +136,12 @@ ORDER BY brand_clean, price_rank;
 
 ## 📈 Key Findings
 
-- **Nykaa is premium-first** — avg ₹1,996, highest among all platforms
-- **Flipkart owns budget** — avg ₹633, 53% listings under ₹500
-- **Amazon plays all segments** — widest range ₹57 → ₹48,496
-- **784 underpriced products** identified → avg revenue uplift ₹4,961 per SKU
-- **583 overpriced products** flagged at risk of conversion loss
-- **13 cross-platform arbitrage opportunities** detected → max gap ₹7,001
-- **Most expensive listing:** Parfums De Marly Delina on Amazon.in at ₹27,000
-- 
+- **Nykaa is a premium-first platform** — highest avg price, 10 luxury listings, targets beauty enthusiasts not price hunters
+- **Flipkart owns budget** — 53% listings under ₹500, zero luxury products, competes on volume
+- **Amazon plays all segments** — only platform with meaningful presence in every price tier (₹149 → ₹26,999)
+- **133 unique brands** identified across 108 clean listings — highly fragmented market
+- **Most expensive listing:** Parfums De Marly Delina on Amazon.in at ₹26,999
+
 ---
 
 ## 🛠️ Tech Stack
@@ -163,17 +157,14 @@ ORDER BY brand_clean, price_rank;
 | Google Sheets | Dashboard data source |
 | Looker Studio | Interactive business dashboard |
 | Git + GitHub | Version control |
-| ScraperAPI | Anti-bot rotating proxy scraping |
-| RapidFuzz  | Fuzzy product matching across platforms |
 
 ---
 
 ## ⚠️ Limitations & Next Steps
 
 **Current limitations:**
-- ScraperAPI free tier = 1,000 calls/month
-- Nykaa JS rendering occasionally returns 500 errors — handled with retry logic
-- Product matching limited to 500 products per platform for runtime efficiency
+- SerpApi free tier caps at 100 calls/month (~160 raw products)
+- Flipkart and Nykaa prices extracted from organic snippets — not always available
 - Single scrape snapshot — no time-series pricing trends yet
 
 **Planned improvements:**
@@ -181,15 +172,10 @@ ORDER BY brand_clean, price_rank;
 - [ ] Migrate warehouse to Supabase (free Postgres)
 - [ ] Add price tracking over time (detect price drops/hikes)
 - [ ] Expand to Myntra and Meesho
-- [ ] Streamlit app for live price lookup
-
----
-
-**Search terms:** perfume · eau de parfum · attar · fragrance · cologne · body mist · luxury perfume · budget perfume · Indian perfume · deodorant perfume
 
 ---
 
 ## 👤 Author
 
 **Mudit Thakur** · Data Analyst
-[GitHub](https://github.com/Mudit-Thakur) · [LinkedIn](https://www.linkedin.com/in/mudit-thakur1/)
+[GitHub](https://github.com/Mudit-Thakur) · [LinkedIn](https://linkedin.com/in/mudit-thakur)
