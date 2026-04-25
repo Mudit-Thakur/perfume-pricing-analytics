@@ -174,6 +174,15 @@ ORDER BY brand_clean, price_rank;
 
 ---
 
+## 📌 Strategic Recommendations for D2C Fragrance Brands
+
+- **Launching under ₹1,000?** Prioritize Flipkart — 53% of listings are budget tier, highest volume of price-sensitive buyers
+- **Targeting beauty enthusiasts?** Nykaa only — it's the only platform with meaningful luxury positioning (avg ₹1,996)
+- **Testing a new SKU?** Start on Amazon.in — only platform present across all 4 price tiers simultaneously
+- **Cross-platform arbitrage:** 13 products identified with avg price gap of ₹1,143 — brands leaking margin by not standardizing pricing across platforms
+
+---
+
 ## 👤 Author
 
 **Mudit Thakur** · Data Analyst
