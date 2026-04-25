@@ -38,7 +38,7 @@ SerpApi (Google Shopping + Google Search)
             ↓
   perfume_scraper.py  ←  Python 3.11
             ↓
-perfume_prices_clean.csv  (2,067 unique products, 3 platforms)
+  perfume_prices_clean.csv  (2,067 unique products, 3 platforms)
             ↓
   Colab Notebook  ←  Pandas + SQLite + Plotly
             ↓
