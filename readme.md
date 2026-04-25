@@ -16,8 +16,7 @@ An end-to-end pricing intelligence pipeline that scrapes perfume listings across
 
 👉 [View Interactive Looker Studio Dashboard](https://datastudio.google.com/reporting/45d52495-9ce0-4e54-9451-da9c9bb45b5a)
 
-![Dashboard Preview](https://github.com/Mudit-Thakur/perfume-pricing-analytics/blob/main/dashboard_preview.png?raw=true)
-
+![Dashboard Preview](https://github.com/Mudit-Thakur/perfume-pricing-analytics/blob/main/Indian_Perfume_Pricing_Intelligence_Dashboard.png)
 ---
 
 ## ❓ Business Questions Answered
