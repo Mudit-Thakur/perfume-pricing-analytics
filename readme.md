@@ -16,8 +16,7 @@ An end-to-end pricing intelligence pipeline that scrapes perfume listings across
 
 👉 [View Interactive Looker Studio Dashboard](https://datastudio.google.com/reporting/45d52495-9ce0-4e54-9451-da9c9bb45b5a)
 
-![Dashboard Preview](https://github.com/Mudit-Thakur/perfume-pricing-analytics/blob/main/dashboard_preview.png?raw=true)
-
+![Dashboard Preview](https://github.com/Mudit-Thakur/perfume-pricing-analytics/blob/main/Indian_Perfume_Pricing_Intelligence_Dashboard.png)
 ---
 
 ## ❓ Business Questions Answered
@@ -39,7 +38,7 @@ SerpApi (Google Shopping + Google Search)
             ↓
   perfume_scraper.py  ←  Python 3.11
             ↓
-  perfume_prices_clean.csv  (108 clean rows, 3 platforms)
+  perfume_prices_clean.csv  (2,067 unique products, 3 platforms)
             ↓
   Colab Notebook  ←  Pandas + SQLite + Plotly
             ↓
@@ -55,7 +54,7 @@ perfume-pricing-analytics/
 │
 ├── perfume_scraper.py                  # Multi-platform scraper (SerpApi)
 ├── Perfume_Pricing_Analytics_India.ipynb  # Full analysis notebook
-├── perfume_prices_clean.csv            # Clean dataset (108 products)
+├── perfume_prices_clean.csv            # Clean dataset (2,067 unique products)
 ├── .gitignore                          # Excludes raw scraper outputs + API keys
 └── README.md
 ```
@@ -178,4 +177,4 @@ ORDER BY brand_clean, price_rank;
 ## 👤 Author
 
 **Mudit Thakur** · Data Analyst
-[GitHub](https://github.com/Mudit-Thakur) · [LinkedIn](https://linkedin.com/in/mudit-thakur)
+[GitHub](https://github.com/Mudit-Thakur) · [LinkedIn](https://www.linkedin.com/in/mudit-thakur1/)
